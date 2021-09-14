@@ -1,12 +1,10 @@
 // core modules
 import { Component, OnInit } from '@angular/core';
 
-// custom components
 import { FetchDataApiService } from '../fetch-api-data.service';
 import { GenreCardComponent } from '../genre-card/genre-card.component';
 import { DirectorCardComponent } from '../director-card/director-card.component';
 import { SynopsisCardComponent } from '../synopsis-card/synopsis-card.component';
-// import MovieGenre / MovieDirector / MovieSynopsis
 
 // material modules
 import { MatDialog } from '@angular/material/dialog';
@@ -23,7 +21,6 @@ const user = localStorage.getItem('username');
 })
 
 export class FavoritesComponent implements OnInit {
-  // isLoading: false;
   user: any = {};
   favorites: any = [];
   movies: any[] = [];

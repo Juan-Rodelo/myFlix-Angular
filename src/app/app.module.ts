@@ -21,6 +21,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { DirectorCardComponent } from './director-card/director-card.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { GenreCardComponent } from './genre-card/genre-card.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ProfileEditComponent } from './profile-edit/profile-edit.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SynopsisCardComponent } from './synopsis-card/synopsis-card.component';
 
 
 const appRoutes: Routes = [
@@ -37,7 +42,12 @@ const appRoutes: Routes = [
     MovieCardComponent,
     WelcomePageComponent,
     DirectorCardComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    GenreCardComponent,
+    NavbarComponent,
+    ProfileEditComponent,
+    ProfileComponent,
+    SynopsisCardComponent
   ],
   imports: [
     BrowserModule,

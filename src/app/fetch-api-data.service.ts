@@ -4,6 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/internal/operators';
 import { map } from 'rxjs/operators';
 import { tokenize } from '@angular/compiler/src/ml_parser/lexer';
+import { Router } from '@angular/router';
 
 const apiUrl = 'https://movies87.herokuapp.com';
 // Get token from local storage for requests
