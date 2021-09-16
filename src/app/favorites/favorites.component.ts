@@ -33,7 +33,7 @@ export class FavoritesComponent implements OnInit {
   ) { }
 
   /**
-   * gets movies and favoritemovies when initialized
+   * gets movies and favoritemovies 
    */
   ngOnInit(): void {
     this.getMovies();
@@ -41,14 +41,13 @@ export class FavoritesComponent implements OnInit {
   }
 
   /** 
-  * this component gets all movies from the server and compares the users favorites (favs) with the movie array.
-  * the movies from the user favorites will then be pushed to a new array (favorites).
-  * The favorites-View is a not dependend on the movieCard view
-  * but movies can only be added to the favorite movies array from the movie-card component
+  * all movies from the server and compares  users favorites with the movie array.
+  * the movies from the user favorites will then be pushed to a new array.
+
   */
 
   /**
-   * gets all movies
+   *  all movies
    */
   getMovies(): void {
     // this.isLoading: true
@@ -61,7 +60,7 @@ export class FavoritesComponent implements OnInit {
   }
 
   /**
-   * gets the users favorite movies
+   * gets users favorite movies
    */
   getUsersFavs(): void {
     this.fetchApiData.getUser(user).subscribe((resp: any) => {
@@ -72,8 +71,8 @@ export class FavoritesComponent implements OnInit {
   }
 
   /**
-   * movies are filtered if part of favoritemovies array
-   * @returns array of movies to be displayed in this component
+   * movies are filtered
+   * @returns array of movies to component
    */
   filterFavorites(): void {
     this.movies.forEach((movie: any) => {
@@ -85,7 +84,7 @@ export class FavoritesComponent implements OnInit {
   }
 
   /**
-   * adds the movie to the users favoritemovies array
+   * adds the movie to favoritemovies 
    * @param id (movie._id - unique identifier)
    * @param title (movie title)
    * @returns a status message - success/error
@@ -118,7 +117,7 @@ export class FavoritesComponent implements OnInit {
   }
 
   /**
-   * opens genre modal with infos about genre
+   * opens genre modal 
    * @param name (genre name)
    * @param description (genre description)
    */
@@ -130,7 +129,7 @@ export class FavoritesComponent implements OnInit {
   }
 
   /**
-   * opens director modal with infos about director
+   * opens director modal 
    * @param name (director name)
    * @param bio (director bio)
    * @param birthYear (director birthYear)
@@ -144,7 +143,7 @@ export class FavoritesComponent implements OnInit {
   }
 
   /**
-   * opens synopsis modal with infos about movie
+   * opens synopsis modal 
    * @param title (movie title)
    * @param imageUrl (movie image/cover)
    * @param description (movie description)
@@ -158,7 +157,7 @@ export class FavoritesComponent implements OnInit {
   }
 
   /**
-   * Compares movie id's with getUsersFavs returned list to display the favorite movie icon (heart) correctly
+   * Compares movie id's with getUsersFavs returned list to display the favorite movie icon correctly
    * @param id 
    * @returns 
    */

@@ -44,7 +44,7 @@ export class ProfileComponent implements OnInit {
   }
 
   /**
-   * opens a modal 
+   * opens modal 
    */
   openEditProfileDialog(): void {
     this.dialog.open(ProfileEditComponent, {

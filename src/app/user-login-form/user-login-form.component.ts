@@ -32,9 +32,9 @@ export class UserLoginFormComponent implements OnInit {
   ngOnInit(): void { }
 
   /**
-   * Sends a login request, if successful,
-   * - saves username to local storage (for future requests)
-   * - saves token to local storage (for future requests)
+   * Sends a login request,
+   * - saves username to local storage 
+   * - saves token to local storage
    * - redirects to the '/movies' endpoint
    */
   loginUser(): void {

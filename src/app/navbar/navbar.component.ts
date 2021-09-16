@@ -28,7 +28,7 @@ export class NavbarComponent implements OnInit {
   }
 
   /**
-   * opens modal with user details
+   * opens modal user details
    */
   openUserProfile(): void {
     this.dialog.open(ProfileComponent, {
@@ -37,7 +37,7 @@ export class NavbarComponent implements OnInit {
   }
 
   /**
-   * navigates to "all movies"
+   * navigates to  "all movies"
    */
   openAllMovies(): void {
     this.router.navigate(['movies']);
@@ -51,8 +51,8 @@ export class NavbarComponent implements OnInit {
   }
 
   /**
-   * logs out the user by clearing the localstorage (username, token) and reloads the page
-   * then -> redirect to welcome page
+   * logs out the user by clearing the localstorage and reloads the page
+   * redirect to welcome page
    */
   logOut(): void {
     this.router.navigate(['welcome']);

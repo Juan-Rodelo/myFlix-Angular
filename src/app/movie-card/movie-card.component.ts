@@ -31,7 +31,7 @@ export class MovieCardComponent {
   ) { }
 
   /**
-   * gets movies and favoritemovies when initialized
+   * gets movies and favoritemovies 
    */
   ngOnInit(): void {
     this.getMovies();
@@ -61,7 +61,7 @@ export class MovieCardComponent {
   }
 
   /**
-   * opens genre modal with infos about genre
+   * opens genre modal 
    * @param name (genre name)
    * @param description (genre description)
    */
@@ -73,7 +73,7 @@ export class MovieCardComponent {
   }
 
   /**
-   * opens director modal with infos about director
+   * opens director modal 
    * @param name (director name)
    * @param bio (director bio)
    * @param birthYear (director birthYear)
@@ -87,7 +87,7 @@ export class MovieCardComponent {
   }
 
   /**
-   * opens synopsis modal with infos about movie
+   * opens synopsis modal 
    * @param title (movie title)
    * @param imageUrl (movie image/cover)
    * @param description (movie description)
@@ -101,7 +101,7 @@ export class MovieCardComponent {
   }
 
   /**
-   * adds the movie to the users favoritemovies array
+   * adds the movie to  users favoritemovies 
    * @param id (movie._id - unique identifier)
    * @param title (movie title)
    * @returns a status message - success/error
@@ -119,7 +119,7 @@ export class MovieCardComponent {
   }
 
   /**
-   * removes the movie from users favoritemovies array
+   * removes the movie  users favoritemovies 
    * @param id (movie._id - unique identifier)
    * @param title (movie title)
    * @returns a status message - success/error
@@ -137,7 +137,7 @@ export class MovieCardComponent {
   }
 
   /**
-   * Compares movie id's with getUsersFavs returned list to display the favorite movie icon (heart) correctly
+   * Compares movie id's with getUsersFavs returned list to display the favorite movie icon 
    * @param id 
    * @returns 
    */

@@ -33,7 +33,7 @@ export class ProfileEditComponent implements OnInit {
   ngOnInit(): void { }
 
   /**
-   * update user details
+   * update user 
    */
   editProfile(): void {
     this.fetchApiData.editUserProfile(this.userData).subscribe((res) => {
