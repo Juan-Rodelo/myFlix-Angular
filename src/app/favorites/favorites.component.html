@@ -8,8 +8,8 @@
         class="favorite-button">favorite_border</mat-icon>
       <mat-icon *ngIf="setFavStatus(movie._id)" (click)="removeFromUserFavorites(movie._id, movie.title)"
         class="favorite-button-active">favorite</mat-icon>
-      <mat-card-subtitle>Directed by: {{movie.director.name}}</mat-card-subtitle>
     </mat-card-header>
+    <mat-card-subtitle>Directed by: {{movie.director.name}}</mat-card-subtitle>
     <mat-card-content>
       <img class="movie-img" src={{movie.imageUrl}} alt={{movie.title}}>
     </mat-card-content>
