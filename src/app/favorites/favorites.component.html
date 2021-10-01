@@ -3,27 +3,27 @@
 
   <mat-card *ngFor="let movie of favorites;" style="flex: 1 1 auto;">
     <mat-card-header>
-      <mat-card-title>{{movie.title}}</mat-card-title>
-      <mat-icon *ngIf="!setFavStatus(movie._id)" (click)="addToUserFavorites(movie._id, movie.title)"
+      <mat-card-title>{{movie.Title}}</mat-card-title>
+      <mat-icon *ngIf="!setFavStatus(movie._id)" (click)="addToUserFavorites(movie._id, movie.Title)"
         class="favorite-button">favorite_border</mat-icon>
-      <mat-icon *ngIf="setFavStatus(movie._id)" (click)="removeFromUserFavorites(movie._id, movie.title)"
+      <mat-icon *ngIf="setFavStatus(movie._id)" (click)="removeFromUserFavorites(movie._id, movie.Title)"
         class="favorite-button-active">favorite</mat-icon>
     </mat-card-header>
-    <mat-card-subtitle>Directed by: {{movie.director.name}}</mat-card-subtitle>
+    <mat-card-subtitle>Directed by: {{movie.Director.Name}}</mat-card-subtitle>
     <mat-card-content>
-      <img class="movie-img" src={{movie.imageUrl}} alt={{movie.title}}>
+      <img class="movie-img" src={{movie.ImagePath}} alt={{movie.Title}}>
     </mat-card-content>
     <mat-card-actions>
       <button class='button-link' mat-button color='primary'
-        (click)='openGenre(movie.genre.name, movie.genre.description)'>
+        (click)='openGenre(movie.Genre.Name, movie.Genre.Description)'>
         Genre
       </button>
       <button class='button-link' mat-button color='primary'
-        (click)='openDirector(movie.director.name, movie.director.bio, movie.director.birthYear, movie.director.deathYear)'>
+        (click)='openDirector(movie.Director.Name, movie.Director.Bio, movie.Director.BirthYear, movie.Director.DeathYear)'>
         Director
       </button>
       <button class='button-link' mat-button color='primary'
-        (click)='openSynopsis(movie.title, movie.imageUrl, movie.description, movie.year)'>
+        (click)='openSynopsis(movie.Title, movie.ImagePath, movie.Description, movie.Year)'>
         Synopsis
       </button>
 

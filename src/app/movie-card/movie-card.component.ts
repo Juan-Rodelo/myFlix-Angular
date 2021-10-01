@@ -53,8 +53,10 @@ export class MovieCardComponent {
    * gets the users favorite movies
    */
   getUsersFavs(): void {
+    let user = localStorage.getItem('username')
     this.fetchApiData.getUser(user).subscribe((resp: any) => {
-      this.favs = resp.favoritemovies;
+      console.log(resp);
+      this.favs = resp.FavoriteMovies;
       console.log(this.favs, 'favs');
       return this.favs;
     })
@@ -141,6 +143,11 @@ export class MovieCardComponent {
    * @param id 
    * @returns 
    */
+
+  displayfavsbutton(movieid: string) {
+    return this.favs.includes(movieid)
+  }
+
   setFavStatus(id: any): any {
     if (this.favs.includes(id)) {
       return true;

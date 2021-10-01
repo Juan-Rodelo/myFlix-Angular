@@ -63,8 +63,9 @@ export class FavoritesComponent implements OnInit {
    * gets users favorite movies
    */
   getUsersFavs(): void {
+    let user = localStorage.getItem('username')
     this.fetchApiData.getUser(user).subscribe((resp: any) => {
-      this.favs = resp.favoritemovies;
+      this.favs = resp.FavoriteMovies;
       console.log(this.favs, 'favs');
       return this.favs;
     })

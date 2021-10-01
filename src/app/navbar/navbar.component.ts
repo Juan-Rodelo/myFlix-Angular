@@ -55,6 +55,9 @@ export class NavbarComponent implements OnInit {
    * redirect to welcome page
    */
   logOut(): void {
+    localStorage.removeItem('token')
+    localStorage.removeItem('username')
+
     this.router.navigate(['welcome']);
     this.snackBar.open('Logout successful!', 'OK', {
       duration: 3000

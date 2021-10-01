@@ -20,7 +20,7 @@ export class UserLoginFormComponent implements OnInit {
   /**
    * Required fields for the login form
    */
-  @Input() userData = { username: '', password: '' }
+  @Input() userData = { Username: '', Password: '' }
 
   constructor(
     public fetchApiData: FetchDataApiService,
@@ -39,7 +39,8 @@ export class UserLoginFormComponent implements OnInit {
    */
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe((response) => {
-      localStorage.setItem('username', response.user.username);
+      console.log(response)
+      localStorage.setItem('username', response.user.Username);
       localStorage.setItem('token', response.token);
       this.dialogRef.close();
       console.log(response);
